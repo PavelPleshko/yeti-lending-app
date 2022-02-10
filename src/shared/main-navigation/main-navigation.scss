@@ -1,6 +1,9 @@
-$toolbar-height: 4rem;
+@import "../../static/sass/variables.module";
+
+$toolbar-height: 3.5rem;
 
 .MainNavigation {
+  background-color: transparent !important;
 
   &__container {
     height: $toolbar-height;
@@ -24,7 +27,13 @@ $toolbar-height: 4rem;
   &__brand {
     text-decoration: none;
     text-transform: uppercase;
+    color: map-get($surface-colors, secondary);
     font-weight: bold;
+
+    &:hover {
+      color: map-get($surface-colors, secondary);
+      text-decoration: none;
+    }
   }
 
   nav {
@@ -33,12 +42,17 @@ $toolbar-height: 4rem;
       list-style: none;
 
       > li {
-        margin-right: 1em;
+        margin-right: 2em;
       }
 
       a {
+        color: map-get($text-colors, dark);
         text-decoration: none;
         font-weight: bold;
+
+        &:hover {
+          color: map-get($text-colors, secondary);
+        }
       }
     }
   }

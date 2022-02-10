@@ -1,0 +1,33 @@
+// theme vars go here
+
+$colors: (
+        white: #ffffff,
+        grey: #cacaca,
+);
+
+$surface-colors: (
+        normal: map_get($colors, white),
+        brand: #00296f,
+        secondary: #ff2852,
+        highlight: #deeefd,
+        disabled: map_get($colors, grey)
+);
+
+$text-colors: (
+        main: #2e2f32,
+        brand: #00296f,
+        dark: #444445,
+        secondary: #ff2852,
+        inverse: map_get($colors, white),
+        link: #5583c3,
+        hover: #456FAB,
+        disabled: map_get($colors, grey)
+);
+
+
+:export {
+  surfaceNormal: map-get($surface-colors, normal);
+  surfaceBrand: map-get($surface-colors, brand);
+  surfaceSecondary: map-get($surface-colors, secondary);
+  textColors: #ffffff;
+}
