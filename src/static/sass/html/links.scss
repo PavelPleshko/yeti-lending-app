@@ -1,0 +1,15 @@
+@import "../variables.module";
+
+$text-link-color: map-get($text-colors, link) !default;
+$text-link-hover-color: map-get($text-colors, 'hover') !default;
+
+a {
+  color: $text-link-color;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $text-link-hover-color;
+    text-decoration: underline;
+  }
+}

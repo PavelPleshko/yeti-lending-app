@@ -1,0 +1,44 @@
+@import "../static/sass/variables.module";
+
+$jumbotron-min-height: 25rem;
+
+.LandingPage {
+  position: relative;
+
+  &__hero {
+
+    .Jumbotron {
+      min-height: $jumbotron-min-height;
+    }
+
+    &-container {
+      display: flex;
+      padding-left: 1.5rem;
+    }
+
+    &-content {
+      h1 {
+        color: map-get($text-colors, brand);
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 0;
+        color: map-get($text-colors, dark);
+      }
+    }
+  }
+
+  &__hero-bg {
+    position: absolute;
+    min-height: $jumbotron-min-height;
+    width: 100%;
+    background-image: url("../static/images/snowflake.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right 20% center;
+    opacity: 0.25;
+    transform-style: preserve-3d;
+    transform: skewX(-50deg);
+  }
+
+}
