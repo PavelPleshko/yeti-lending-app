@@ -22,16 +22,21 @@ $toolbar-height: 3.5rem;
     display: flex;
     align-items: center;
     max-height: 100%;
+    transition: 200ms transform;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__brand {
     text-decoration: none;
     text-transform: uppercase;
-    color: map-get($surface-colors, secondary);
+    color: map-get($surface-colors, brand);
     font-weight: bold;
 
     &:hover {
-      color: map-get($surface-colors, secondary);
+      color: map-get($surface-colors, brand);
       text-decoration: none;
     }
   }
@@ -46,12 +51,12 @@ $toolbar-height: 3.5rem;
       }
 
       a {
-        color: map-get($text-colors, dark);
+        color: map-get($text-colors, inverse);
         text-decoration: none;
         font-weight: bold;
 
         &:hover {
-          color: map-get($text-colors, secondary);
+          color: map-get($text-colors, brand);
         }
       }
     }
