@@ -11,12 +11,12 @@ import './App.scss';
 function App () {
     return (
         <ThemeProvider theme={ yetiMainTheme }>
-            <CssBaseline/>
-            <div className="layout-container layout-container--cutoff layout-wrapper">
-                <header className="layout-bar">
-                    <MainNavigation/>
-                </header>
-                <div className="layout-container layout-container--scroll">
+
+            {/*<CssBaseline/>*/}
+
+            <div className="layout-wrapper layout-container layout-container--cutoff">
+
+                <div className="layout-container layout-container--auto layout-container--scroll">
                     <main className="layout-container">
                         <AppRouter/>
                     </main>
@@ -26,6 +26,7 @@ function App () {
                     </footer>
                 </div>
             </div>
+
         </ThemeProvider>
     );
 }

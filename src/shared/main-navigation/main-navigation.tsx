@@ -5,7 +5,7 @@ import Logo from '../logo/logo';
 import './main-navigation.scss';
 
 function MainNavigation () {
-    return <AppBar position="static" color="default" elevation={ 0 } className="MainNavigation">
+    return <AppBar position="static" color="transparent" elevation={ 0 } className="MainNavigation">
 
         <Toolbar variant="dense" className="MainNavigation__container">
             <div className="MainNavigation__links">
@@ -27,7 +27,7 @@ function MainNavigation () {
             </div>
 
             <div className="MainNavigation__actions">
-                <Button variant="outlined" href="/app">
+                <Button variant="outlined" color="secondary" href="/app">
                     Go to app
                 </Button>
             </div>

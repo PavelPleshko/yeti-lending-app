@@ -8,6 +8,15 @@ export const yetiMainTheme = createTheme({
         },
         secondary: {
             main: variables.surfaceSecondary,
+        },
+        background: {
+            default: variables.surfaceBrand,
+            paper: variables.surfacePaper
         }
     },
+    // components: {
+    //     MuiCard: {
+    //
+    //     }
+    // }
 });

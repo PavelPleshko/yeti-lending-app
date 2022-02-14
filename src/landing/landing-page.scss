@@ -5,7 +5,13 @@ $jumbotron-min-height: 25rem;
 .LandingPage {
   position: relative;
 
+  &__hero-wrapper {
+    background: rgb(6, 40, 93);
+    background: linear-gradient(45deg, #062888 58%, rgba(0, 212, 255, 1) 100%);
+  }
+
   &__hero {
+    position: relative;
 
     .Jumbotron {
       min-height: $jumbotron-min-height;
@@ -18,27 +24,51 @@ $jumbotron-min-height: 25rem;
 
     &-content {
       h1 {
-        color: map-get($text-colors, brand);
+        color: map-get($text-colors, inverse);
         margin-bottom: 0;
       }
+
       p {
         margin-top: 0;
-        color: map-get($text-colors, dark);
+        color: map-get($text-colors, inverse);
       }
+    }
+  }
+
+  &__content-section {
+    padding: 4rem 20%;
+
+    &__dark {
+      background-color: map-get($surface-colors, secondary);
+      color: map-get($text-colors, inverse);
+    }
+
+    &-header {
+      position: relative;
+      font-weight: bolder;
+      text-align: center;
+
+      //&:before {
+      //  content: '';
+      //  display: block;
+      //  position: absolute;
+      //  background-color: map-get($surface-colors, secondary);
+      //  height: 8px;
+      //  width: 35%;
+      //  bottom: -(1.4rem/2);
+      //  left: 0;
+      //}
     }
   }
 
   &__hero-bg {
     position: absolute;
-    min-height: $jumbotron-min-height;
     width: 100%;
-    background-image: url("../static/images/snowflake.svg");
+    height: 100%;
+    background-image: url("../static/images/hero-bg.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right 20% center;
-    opacity: 0.25;
-    transform-style: preserve-3d;
-    transform: skewX(-50deg);
   }
 
 }

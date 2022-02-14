@@ -1,23 +1,25 @@
-// theme vars go here
-
 $colors: (
+        // TODO name colors
         white: #ffffff,
+        lightgrey: #f6f6f6,
         grey: #cacaca,
 );
 
 $surface-colors: (
         normal: map_get($colors, white),
-        brand: #00296f,
-        secondary: #ff2852,
+        light: map_get($colors, lightgrey),
+        paper: #0e4399,
+        brand: #00d4ff,
+        secondary: rgb(6,40,93),
         highlight: #deeefd,
         disabled: map_get($colors, grey)
 );
 
 $text-colors: (
         main: #2e2f32,
-        brand: #00296f,
+        brand: #00d4ff,
         dark: #444445,
-        secondary: #ff2852,
+        secondary: rgb(6,40,93),
         inverse: map_get($colors, white),
         link: #5583c3,
         hover: #456FAB,
@@ -28,6 +30,7 @@ $text-colors: (
 :export {
   surfaceNormal: map-get($surface-colors, normal);
   surfaceBrand: map-get($surface-colors, brand);
+  surfacePaper: map-get($surface-colors, paper);
   surfaceSecondary: map-get($surface-colors, secondary);
   textColors: #ffffff;
 }
