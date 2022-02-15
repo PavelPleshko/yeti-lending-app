@@ -23,7 +23,7 @@ function LandingPage () {
                                     <p>
                                         Discover the new way of investing
                                     </p>
-                                    <Button variant="contained">
+                                    <Button color="secondary" variant="contained">
                                         Browse assets
                                     </Button>
                                 </Grid>
@@ -39,7 +39,7 @@ function LandingPage () {
             </section>
 
 
-            <section className="LandingPage__content-section LandingPage__content-section__dark">
+            <section className="LandingPage__content-section">
                 <h2 className="LandingPage__content-section-header">Track your income</h2>
                 <Grid container>
                     <Grid item xs={ 6 }>
@@ -47,7 +47,7 @@ function LandingPage () {
                             You can monitor the real-time earnings on the user dashboard. This will
                             help you to invest and borrow intelligently.
                         </p>
-                        <Button variant="contained">
+                        <Button variant="contained" color="secondary">
                             Connect now
                         </Button>
                     </Grid>
@@ -59,9 +59,9 @@ function LandingPage () {
                 </Grid>
             </section>
 
-            <section className="LandingPage__content-section" style={ { textAlign: 'center' } }>
+            <section className="LandingPage__content-section LandingPage__content-section__dark" style={ { textAlign: 'center' } }>
 
-                <h1>More than <b>12</b> asset pools with more than <b>3.000.000$</b> worth assets</h1>
+                <h1>More than <b className="accent-text">12</b> asset pools with more than <b className="accent-text">3.000.000$</b> worth assets</h1>
 
                 <Button variant="contained">
                     See all

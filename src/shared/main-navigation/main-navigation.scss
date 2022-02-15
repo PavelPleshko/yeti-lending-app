@@ -1,9 +1,9 @@
 @import "../../static/sass/variables.module";
 
-$toolbar-height: 3.5rem;
+$toolbar-height: 4rem;
 
 .MainNavigation {
-  background-color: transparent !important;
+  background-color: map-get($surface-colors, brand) !important;
 
   &__container {
     height: $toolbar-height;
@@ -30,13 +30,14 @@ $toolbar-height: 3.5rem;
   }
 
   &__brand {
+    margin-left: 0.5rem;
     text-decoration: none;
-    text-transform: uppercase;
-    color: map-get($surface-colors, brand);
+    text-transform: capitalize;
+    color: map-get($surface-colors, accent);
     font-weight: bold;
 
     &:hover {
-      color: map-get($surface-colors, brand);
+      color: map-get($surface-colors, accent);
       text-decoration: none;
     }
   }
@@ -56,7 +57,7 @@ $toolbar-height: 3.5rem;
         font-weight: bold;
 
         &:hover {
-          color: map-get($text-colors, brand);
+          color: map-get($text-colors, accent);
         }
       }
     }

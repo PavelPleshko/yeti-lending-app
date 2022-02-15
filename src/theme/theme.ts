@@ -7,16 +7,11 @@ export const yetiMainTheme = createTheme({
             main: variables.surfaceBrand,
         },
         secondary: {
-            main: variables.surfaceSecondary,
+            main: variables.surfaceAccent,
         },
         background: {
-            default: variables.surfaceBrand,
+            default: '#d7f6fe',
             paper: variables.surfacePaper
         }
     },
-    // components: {
-    //     MuiCard: {
-    //
-    //     }
-    // }
 });
