@@ -6,8 +6,8 @@ $jumbotron-min-height: 25rem;
   position: relative;
 
   &__hero-wrapper {
-    background: rgb(6, 40, 93);
-    background: linear-gradient(45deg, #062888 58%, rgba(0, 212, 255, 1) 100%);
+    background: #0B3372;
+    background: linear-gradient(45deg, #0B3372 58%, #19458A 100%);
   }
 
   &__hero {
@@ -37,27 +37,17 @@ $jumbotron-min-height: 25rem;
 
   &__content-section {
     padding: 4rem 20%;
+    background-color: #0B3372;
+    color: map-get($text-colors, inverse);
 
     &__dark {
       background-color: map-get($surface-colors, secondary);
-      color: map-get($text-colors, inverse);
     }
 
     &-header {
       position: relative;
       font-weight: bolder;
       text-align: center;
-
-      //&:before {
-      //  content: '';
-      //  display: block;
-      //  position: absolute;
-      //  background-color: map-get($surface-colors, secondary);
-      //  height: 8px;
-      //  width: 35%;
-      //  bottom: -(1.4rem/2);
-      //  left: 0;
-      //}
     }
   }
 
@@ -71,4 +61,10 @@ $jumbotron-min-height: 25rem;
     background-position: right 20% center;
   }
 
+}
+
+
+.accent-text {
+  font-weight: bold;
+  color: map-get($text-colors, accent);
 }
