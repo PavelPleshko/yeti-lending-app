@@ -12,6 +12,14 @@ export const yetiMainTheme = createTheme({
         background: {
             default: '#d7f6fe',
             paper: variables.surfacePaper
-        }
+        },
     },
+    typography: {
+        body1: {
+            color: variables.textBody1,
+        },
+        body2: {
+            color: variables.textBody2,
+        }
+    }
 });

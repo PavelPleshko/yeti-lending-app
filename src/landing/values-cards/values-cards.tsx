@@ -34,12 +34,15 @@ function ValuesCards () {
                         <CardHeader className={styles.ValueCard__header} title={ card.title }/>
 
                         <CardContent>
+
                             <span className={styles.ValueCard__number}>
                                 0{index + 1}
                             </span>
-                            <Typography variant="body2">
+
+                            <Typography variant="body1">
                                 { card.description }
                             </Typography>
+
                         </CardContent>
 
                     </Card>
