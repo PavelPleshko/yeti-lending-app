@@ -6,8 +6,8 @@ $jumbotron-min-height: 25rem;
   position: relative;
 
   &__hero-wrapper {
-    background: #0B3372;
-    background: linear-gradient(45deg, #0B3372 58%, #19458A 100%);
+    background: map-get($surface-colors, secondary);
+    background: linear-gradient(45deg, map-get($surface-colors, secondary) 58%, map-get($surface-colors, brand) 100%);
   }
 
   &__hero {
@@ -21,27 +21,14 @@ $jumbotron-min-height: 25rem;
       display: flex;
       padding-left: 1.5rem;
     }
-
-    &-content {
-      h1 {
-        color: map-get($text-colors, inverse);
-        margin-bottom: 0;
-      }
-
-      p {
-        margin-top: 0;
-        color: map-get($text-colors, inverse);
-      }
-    }
   }
 
   &__content-section {
     padding: 4rem 20%;
-    background-color: #0B3372;
-    color: map-get($text-colors, inverse);
+    background-color: map-get($surface-colors, secondary);
 
     &__dark {
-      background-color: map-get($surface-colors, secondary);
+      background-color: map-get($surface-colors, brand);
     }
 
     &-header {
