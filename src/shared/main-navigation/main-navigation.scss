@@ -1,6 +1,7 @@
 @import "../../static/sass/variables.module";
+@import "../../static/sass/mixins/typography-units-calc";
 
-$toolbar-height: 4rem;
+$toolbar-height: rhythm(3);
 
 .MainNavigation {
   background-color: map-get($surface-colors, brand) !important;

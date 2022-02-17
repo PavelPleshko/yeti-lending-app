@@ -2,6 +2,7 @@
 @import "./html/typography";
 
 @import "./util/layouts";
+@import "../../static/sass/variables.module";
 
 * {
   border: 0;
@@ -22,8 +23,8 @@ html {
   min-height: 100%;
   width: 100%;
   box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   color: #121212;
   padding: 0;
   margin: 0;

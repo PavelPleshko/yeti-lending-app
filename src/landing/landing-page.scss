@@ -7,7 +7,6 @@ $jumbotron-min-height: 25rem;
 
   &__hero-wrapper {
     background: map-get($surface-colors, secondary);
-    background: linear-gradient(45deg, map-get($surface-colors, secondary) 58%, map-get($surface-colors, brand) 100%);
   }
 
   &__hero {
