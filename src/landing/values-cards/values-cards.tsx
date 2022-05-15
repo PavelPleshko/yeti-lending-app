@@ -25,13 +25,13 @@ const cardsData: ValueCard[] = [
 
 function ValuesCards () {
 
-    return <Grid container spacing={ 3 }>
+    return <Grid container spacing={ 3 } component="ol">
         { cardsData.map((card, index) => {
             return (
-                <Grid item md={ 4 } xs={ 12 } key={ index }>
+                <Grid item md={ 4 } xs={ 12 } key={ index } component="li">
                     <Card className={styles.ValueCard}>
 
-                        <CardHeader className={styles.ValueCard__header} title={ card.title }/>
+                        <CardHeader className={styles.ValueCard__header} title={ card.title } component="h3"/>
 
                         <CardContent>
 

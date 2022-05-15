@@ -1,7 +1,8 @@
 @import "../../../static/sass/variables.module";
+@import "../../../static/sass/mixins/typography-units-calc";
 
 .Jumbotron {
   position: relative;
   width: 100%;
-  padding: 4rem 2rem;
+  padding: rhythm(3) rhythm(1.5);
 }

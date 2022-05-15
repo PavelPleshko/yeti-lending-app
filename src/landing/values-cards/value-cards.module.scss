@@ -1,4 +1,5 @@
 @import "../../static/sass/variables.module";
+@import "../../static/sass/mixins/typography-units-calc";
 
 .ValueCard {
   height: 100%;
@@ -7,14 +8,14 @@
 
   &__number {
     position: absolute;
-    top: 8px;
-    right: 16px;
-    font-size: 48px;
-    line-height: 48px;
-    width: 48px;
+    top: rhythm(0);
+    right: rhythm(1.5);
+    font-size: map-get($font-sizes, h2) * 2;
+    width: rhythm(2);
     text-align: center;
     font-weight: bold;
     color: map-get($text-colors, brand);
     opacity: 0.5;
+    pointer-events: none;
   }
 }

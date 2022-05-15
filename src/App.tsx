@@ -2,7 +2,6 @@ import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppRouter from './AppRouter';
-import MainNavigation from './shared/main-navigation/main-navigation';
 import { yetiMainTheme } from './theme/theme';
 
 

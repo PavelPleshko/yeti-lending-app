@@ -1,13 +1,44 @@
 @import "../variables.module";
 @import "../mixins/typography-units-calc";
 
+$base-bottom-margin: rhythm(1 - $font-size-increase-coefficient * 3);
+
 h1, h2, h3, h4, h5, h6 {
   color: map-get($text-colors, normal);
-  margin-bottom: rhythm(0.5);
 }
 
 p {
   color: map-get($text-colors, body1);
-  line-height: rhythm(1);
-  margin-bottom: rhythm(0.5);
+  margin-bottom: $base-bottom-margin;
+}
+
+h1 {
+  font-size: map-get($font-sizes, h1);
+  margin-bottom: rhythm(1);
+
+}
+
+h2 {
+  font-size: map-get($font-sizes, h2);
+  margin-bottom: rhythm(1 - $font-size-increase-coefficient);
+}
+
+h3 {
+  font-size: map-get($font-sizes, h3);
+  margin-bottom: rhythm(1 - $font-size-increase-coefficient * 2);
+}
+
+h4 {
+  font-size: map-get($font-sizes, h4);
+  margin-bottom: $base-bottom-margin;
+}
+
+h5 {
+  font-size: map-get($font-sizes, h5);
+  margin-bottom: $base-bottom-margin;
+}
+
+h6 {
+  font-size: map-get($font-sizes, h6);
+  margin-bottom: $base-bottom-margin;
 }
