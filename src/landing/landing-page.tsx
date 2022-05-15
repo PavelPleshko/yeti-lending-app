@@ -1,8 +1,10 @@
 import { Button, Grid } from '@mui/material';
 import * as React from 'react';
+
 import MainNavigation from '../shared/main-navigation/main-navigation';
 import Jumbotron from '../shared/ui/jumbotron/jumbotron';
 import './landing-page.scss';
+import HeroBg from './hero-bg';
 import ValuesCards from './values-cards/values-cards';
 import dashboardImage from '../static/images/dashboard.svg';
 
@@ -13,15 +15,18 @@ function LandingPage () {
             <div className="LandingPage__hero-wrapper">
                 <MainNavigation/>
                 <div className="LandingPage__hero">
-                    <div className="LandingPage__hero-bg"/>
+                    <HeroBg/>
+                    <div>
+                        <div className="LandingPage__hero-bg"/>
+                    </div>
                     <Jumbotron>
                         <div className="LandingPage__hero-container">
                             <Grid container spacing={ 4 }>
                                 <Grid item md={ 1 } xs={ 0 }/>
                                 <Grid item xs={ 12 } md={ 6 } className="LandingPage__hero-content">
-                                    <h1>Lend and borrow at a favorable rate</h1>
+                                    <h1>Best platform for lending and borrowing</h1>
                                     <p>
-                                        Discover the new way of investing
+                                        Find the most favorable terms of managing assets
                                     </p>
                                     <Button color="secondary" variant="contained">
                                         Browse assets
@@ -61,12 +66,11 @@ function LandingPage () {
 
             <section className="LandingPage__content-section LandingPage__content-section__dark" style={ { textAlign: 'center' } }>
 
-                <h1>More than <b className="accent-text">12</b> asset pools with more than <b className="accent-text">3.000.000$</b> worth assets</h1>
+                <h2>More than <b className="accent-text">12</b> asset pools with more than <b className="accent-text">3.000.000$</b> worth assets</h2>
 
-                <Button variant="contained">
+                <Button color="secondary" variant="contained">
                     See all
                 </Button>
-
 
             </section>
         </div>

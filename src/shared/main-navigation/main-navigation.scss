@@ -31,7 +31,7 @@ $toolbar-height: rhythm(3);
   }
 
   &__brand {
-    margin-left: 0.5rem;
+    margin-left: rhythm(0.5);
     text-decoration: none;
     text-transform: capitalize;
     color: map-get($surface-colors, accent);
@@ -49,7 +49,7 @@ $toolbar-height: rhythm(3);
       list-style: none;
 
       > li {
-        margin-right: 2em;
+        margin-right: rhythm(1.5);
       }
 
       a {
