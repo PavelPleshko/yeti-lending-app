@@ -1,25 +1,54 @@
 @import "../../static/sass/mixins/typography-units-calc";
+@import "../../static/sass/variables.module";
 
 .Logo {
   position: relative;
-  box-sizing: content-box;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  max-height: 100%;
+  transition: 200ms transform;
 
-  &__image {
+  &__image-wrapper {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: content-box;
+    justify-content: center;
     width: 100%;
     height: auto;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
     max-width: 2.5rem;
     padding: rhythm(0.25);
   }
 
+  &__image {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
   &__underlay {
     position: absolute;
-    background-color: #FBA000;
+    background-color: map-get($surface-colors, accent);
     width: 100%;
     height: 100%;
     border-radius: 50%;
+  }
+
+  &__brand-link {
+    flex-shrink: 0;
+    margin-left: rhythm(0.5);
+    text-decoration: none;
+    text-transform: capitalize;
+    color: map-get($surface-colors, accent);
+    font-weight: bold;
+
+    &:hover {
+      color: map-get($surface-colors, accent);
+      text-decoration: none;
+    }
   }
 }

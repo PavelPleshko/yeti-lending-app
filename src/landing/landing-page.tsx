@@ -12,8 +12,8 @@ function LandingPage () {
 
     return (
         <div className="LandingPage">
+            <MainNavigation/>
             <div className="LandingPage__hero-wrapper">
-                <MainNavigation/>
                 <div className="LandingPage__hero">
                     <HeroBg/>
                     <div>

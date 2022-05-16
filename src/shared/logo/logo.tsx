@@ -5,8 +5,11 @@ import logoSrc from '../../static/images/logo.svg';
 function Logo (props: any) {
 
     return <div className="Logo">
-        { props.withBackground && <div className="Logo__underlay"/> }
-        <img src={ logoSrc } className='Logo__image' alt="Yeti logo"/>
+        <div className="Logo__image-wrapper">
+            { props.withBackground && <div className="Logo__underlay"/> }
+            <img src={ logoSrc } className='Logo__image' alt="Yeti logo"/>
+        </div>
+        { props.withLink && <a href="/" className="Logo__brand-link" aria-label="Home">Yeti finance</a> }
     </div>;
 }
 

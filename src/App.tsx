@@ -2,6 +2,7 @@ import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppRouter from './AppRouter';
+import Footer from './landing/footer/footer';
 import { yetiMainTheme } from './theme/theme';
 
 
@@ -21,7 +22,7 @@ function App () {
                     </main>
 
                     <footer className="layout-bar">
-                        Footer
+                        <Footer/>
                     </footer>
                 </div>
             </div>
