@@ -13,52 +13,52 @@ function Footer () {
                 </div>
             </Grid>
 
-            <Grid item xs={2}>
+            <Grid item xs={ 2 }>
                 <div className="Footer__info-section">
                     <label id="protocol-links-label">
                         Protocol
                     </label>
                     <ul aria-labelledby="protocol-links-label">
                         <li>
-                            <a href="#" target="_blank">Documentation</a>
+                            <a href="/" target="_blank">Documentation</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Yeti token</a>
+                            <a href="/" target="_blank">Yeti token</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">For developers</a>
+                            <a href="/" target="_blank">For developers</a>
                         </li>
                     </ul>
                 </div>
             </Grid>
 
-            <Grid item xs={2}>
+            <Grid item xs={ 2 }>
                 <div className="Footer__info-section">
                     <label id="protocol-links-label">
                         Quick links
                     </label>
                     <ul aria-labelledby="protocol-links-label">
                         <li>
-                            <a href="#" target="_blank">Pools</a>
+                            <a href="/" target="_blank">Pools</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Asset prices</a>
+                            <a href="/" target="_blank">Asset prices</a>
                         </li>
                     </ul>
                 </div>
             </Grid>
 
-            <Grid item xs={2}>
+            <Grid item xs={ 2 }>
                 <div className="Footer__info-section">
                     <label id="protocol-links-label">
                         Community
                     </label>
                     <ul aria-labelledby="protocol-links-label">
                         <li>
-                            <a href="#" target="_blank">Github</a>
+                            <a href="/" target="_blank">Github</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">Discord</a>
+                            <a href="/" target="_blank">Discord</a>
                         </li>
                     </ul>
                 </div>
