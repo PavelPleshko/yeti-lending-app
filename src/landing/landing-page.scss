@@ -1,7 +1,7 @@
 @import "../static/sass/variables.module";
 @import "../static/sass/mixins/typography-units-calc";
 
-$jumbotron-min-height: rhythm(20);
+$jumbotron-min-height: rhythm(22);
 
 .LandingPage {
   position: relative;
@@ -26,10 +26,13 @@ $jumbotron-min-height: rhythm(20);
 
   &__content-section {
     padding: rhythm(2) 15%;
-    background-color: map-get($surface-colors, secondary);
+    color: map-get($text-colors, normal);
 
-    &__dark {
+    &:nth-child(n) {
       background-color: map-get($surface-colors, brand);
+    }
+    &:nth-child(2n) {
+      background-color: map-get($surface-colors, secondary);
     }
 
     &-header {

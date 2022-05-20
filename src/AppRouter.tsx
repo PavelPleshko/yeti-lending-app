@@ -3,12 +3,12 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link, Navigate
+    Navigate
 } from 'react-router-dom';
-import LandingPage from './landing/landing-page';
+
+import { LandingPage } from './landing';
 
 function AppRouter (): JSX.Element {
-
 
     return (
         <Router>

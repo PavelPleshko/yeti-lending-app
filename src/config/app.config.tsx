@@ -33,7 +33,7 @@ export type InitializeAppMachineStates = {
 
 export const AppContext = createContext<AppConfig>({} as AppConfig);
 const staticAppContext = {
-    name: 'Yeti finance',
+    name: 'Smart Yeti',
 };
 
 function AppInitializeProvider (props: any) {

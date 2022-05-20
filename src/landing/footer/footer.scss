@@ -6,7 +6,7 @@ $footer-content-padding: rhythm(2);
 
 .Footer {
   padding: $footer-content-padding;
-  background-color: map-get($surface-colors, secondary);
+  background-color: map-get($surface-colors, brand);
 
   &__info-section {
     > label {

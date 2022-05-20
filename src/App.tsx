@@ -3,7 +3,7 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppRouter from './AppRouter';
 import AppInitializeProvider from './config/app.config';
-import Footer from './landing/footer/footer';
+import { Footer } from './landing/footer';
 import { yetiMainTheme } from './theme/theme';
 
 
