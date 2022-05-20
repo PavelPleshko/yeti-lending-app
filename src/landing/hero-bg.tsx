@@ -1,10 +1,10 @@
 import { useCallback } from 'react';
+import * as React from 'react';
 import Particles from 'react-tsparticles';
 import type { Engine, ISourceOptions } from 'tsparticles-engine';
 import { loadLinksPreset } from 'tsparticles-preset-links';
-import * as React from 'react';
-import './hero-bg.module.scss';
-import {yetiMainTheme} from '../theme/theme';
+
+import { yetiMainTheme } from '../theme/theme';
 
 const particlesConfig: ISourceOptions = {
     fpsLimit: 120,
@@ -77,7 +77,7 @@ function HeroBg () {
         await loadLinksPreset(engine);
     }, []);
 
-    return <Particles id="hero-particles" init={ref} options={ particlesConfig }/>;
+    return <Particles id="hero-particles" init={ ref } options={ particlesConfig }/>;
 }
 
 export default HeroBg;

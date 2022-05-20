@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Smart Yeti UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshots
 
-## Available Scripts
+### Landing page
 
-In the project directory, you can run:
+#### Hero
+![alt text](./screenshots/landing-1.png)
+
+#### 'How it works' section
+![alt text](./screenshots/landing-2.png)
+
+#### 'Track your income' section
+![alt text](./screenshots/landing-3.png)
 
 ### `npm start`
 

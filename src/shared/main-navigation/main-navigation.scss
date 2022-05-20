@@ -20,26 +20,10 @@ $toolbar-height: rhythm(3);
   }
 
   &__logo-container {
-    display: flex;
-    align-items: center;
-    max-height: 100%;
     transition: 200ms transform;
 
     &:hover {
       transform: scale(1.05);
-    }
-  }
-
-  &__brand {
-    margin-left: rhythm(0.5);
-    text-decoration: none;
-    text-transform: capitalize;
-    color: map-get($surface-colors, accent);
-    font-weight: bold;
-
-    &:hover {
-      color: map-get($surface-colors, accent);
-      text-decoration: none;
     }
   }
 

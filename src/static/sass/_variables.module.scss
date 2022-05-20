@@ -52,6 +52,8 @@ $font-sizes: (
         h4: $base-font-size * (1 + $font-size-increase-coefficient),
         h5: $base-font-size,
         h6: $base-font-size,
+        small: $base-font-size * (1 - $font-size-increase-coefficient / 2),
+        tiny: $base-font-size * (1 - $font-size-increase-coefficient),
 );
 /////
 

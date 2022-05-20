@@ -9,8 +9,7 @@ function MainNavigation () {
 
         <Toolbar variant="dense" className="MainNavigation__container">
             <div className="MainNavigation__logo-container">
-                <Logo withBackground />
-                <a href="/" className="MainNavigation__brand" aria-label="Home">Yeti finance</a>
+                <Logo withBackground  withLink />
             </div>
 
             <div className="MainNavigation__links">
@@ -27,9 +26,9 @@ function MainNavigation () {
                 </nav>
 
                 <div className="MainNavigation__actions">
-                    {/*<Button variant="contained" color="secondary" href="/app">*/}
-                    {/*    Go to app*/}
-                    {/*</Button>*/}
+                    <Button variant="contained" color="secondary" href="/app">
+                        Go to app
+                    </Button>
                 </div>
             </div>
         </Toolbar>

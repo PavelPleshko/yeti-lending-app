@@ -1,0 +1,42 @@
+@import "../../static/sass/variables.module";
+@import "../../static/sass/mixins/typography-units-calc";
+
+
+.Steps__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .Step {
+    justify-content: center;
+    margin-bottom: rhythm(2);
+
+    &__content {
+      align-self: center;
+
+      &-description {
+        font-size: map-get($font-sizes, small);
+        color: map-get($text-colors, body1);
+      }
+    }
+
+    &__count {
+      display: flex;
+      justify-content: center;
+
+      > span {
+        font-size: 18px;
+        box-sizing: content-box;
+        border: 2px solid;
+        border-radius: 50%;
+        line-height: 34px;
+        width: 34px;
+        text-align: center;
+      }
+    }
+
+    &__image {
+      max-height: 15rem;
+    }
+  }
+}

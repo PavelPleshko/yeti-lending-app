@@ -1,0 +1,36 @@
+@import "../../static/sass/variables.module";
+@import "../../static/sass/mixins/typography-units-calc";
+
+$list-elements-bottom-margin: rhythm(0.25);
+$footer-content-padding: rhythm(2);
+
+.Footer {
+  padding: $footer-content-padding;
+  background-color: map-get($surface-colors, brand);
+
+  &__info-section {
+    > label {
+      font-weight: bold;
+      display: inline-block;
+      color: map-get($text-colors, normal);
+      margin-bottom: $list-elements-bottom-margin;
+    }
+
+    a {
+      color: map-get($text-colors, body2);
+      font-size: map-get($font-sizes, small);
+
+      &:hover {
+        color: map-get($text-colors, accent);
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      > li:not(:last-child) {
+        margin-bottom: $list-elements-bottom-margin;
+      }
+    }
+  }
+}
