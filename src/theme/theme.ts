@@ -1,25 +1,29 @@
-import { createTheme } from '@mui/material/styles';
-import variables from '../static/sass/_variables.module.scss';
+import { createTheme, Theme } from '@mui/material/styles';
 
-export const yetiMainTheme = createTheme({
-    palette: {
-        primary: {
-            main: variables.surfaceBrand,
+import { ThemeVariablesResolved, ThemeVariables } from './theme.types';
+
+export const createYetiMaterialTheme = (vars: ThemeVariablesResolved): Theme => {
+
+    return createTheme({
+        palette: {
+            primary: {
+                main: vars[ThemeVariables.colorBrand],
+            },
+            secondary: {
+                main: vars[ThemeVariables.colorAccent],
+            },
+            background: {
+                default: vars[ThemeVariables.surfaceColorNormal],
+                paper: vars[ThemeVariables.surfaceColorElevated1]
+            },
         },
-        secondary: {
-            main: variables.surfaceAccent,
+        typography: {
+            body1: {
+                color: vars[ThemeVariables.textColorBody1],
+            },
+            body2: {
+                color: vars[ThemeVariables.textColorBody2],
+            }
         },
-        background: {
-            default: '#d7f6fe',
-            paper: variables.surfacePaper
-        },
-    },
-    typography: {
-        body1: {
-            color: variables.textBody1,
-        },
-        body2: {
-            color: variables.textBody2,
-        }
-    }
-});
+    });
+};

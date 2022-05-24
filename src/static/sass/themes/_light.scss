@@ -1,0 +1,19 @@
+@import "../variables/index";
+
+$text-color-normal: map-get($colors, black);
+$surface-color-normal: map-get($colors, lightgrey);
+
+:root {
+  // palette
+  --color-brand: #{map-get($colors, deepsaphire)};
+  --color-accent: #{map-get($colors, orangepeel)};
+
+  // text colors
+  --text-color-normal: #{transparentize($text-color-normal, 0.13)};
+  --text-color-body1: #{transparentize($text-color-normal, 0.33)};
+  --text-color-body2: #{transparentize($text-color-normal, 0.6)};
+
+  --surface-color-normal: #{$surface-color-normal};
+  --surface-color-elevated1: #{darken($surface-color-normal, 5)};
+  --surface-color-elevated2: #{darken($surface-color-normal, 15)};
+}

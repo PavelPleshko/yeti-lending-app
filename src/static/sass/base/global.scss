@@ -1,9 +1,4 @@
-@import "./html/reset";
-@import "./html/links";
-@import "./html/typography";
-
-@import "./util/layouts";
-@import "../../static/sass/variables.module";
+@import "../variables/index";
 
 $line-height-proportional: $base-line-height / $base-font-size;
 

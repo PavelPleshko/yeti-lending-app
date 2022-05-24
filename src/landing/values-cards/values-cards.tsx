@@ -39,9 +39,9 @@ function ValuesCards () {
                                 0{index + 1}
                             </span>
 
-                            <Typography variant="body1">
+                            <p>
                                 { card.description }
-                            </Typography>
+                            </p>
 
                         </CardContent>
 

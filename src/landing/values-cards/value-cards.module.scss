@@ -1,10 +1,16 @@
-@import "../../static/sass/variables.module";
-@import "../../static/sass/mixins/typography-units-calc";
+@import "../../static/sass/variables/index";
+@import "src/static/sass/abstracts/typography-units-calc";
 
 .ValueCard {
   height: 100%;
   position: relative;
-  color: white !important; // TODO ??????
+  // TODO remove it since it comes from material
+  background-color: var(--surface-color-elevated1) !important;
+  color: var(--text-color-body1);
+
+  &__header {
+    color: var(--text-color-normal);
+  }
 
   &__number {
     position: absolute;
@@ -14,7 +20,7 @@
     width: rhythm(2);
     text-align: center;
     font-weight: bold;
-    color: map-get($text-colors, brand);
+    color: var(--text-color-body2);
     opacity: 0.5;
     pointer-events: none;
   }

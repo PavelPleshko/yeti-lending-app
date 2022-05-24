@@ -13,3 +13,8 @@ declare module '*.scss' {
     const content: {[className: string]: string};
     export = content;
 }
+
+declare module '!!raw-loader!*' {
+    const content: string;
+    export default content;
+}

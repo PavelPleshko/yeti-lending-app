@@ -1,0 +1,23 @@
+@function generate-color-palette($predefined: (), $colors: ()) {
+  $lightness: (0%, +14%, +5%, +8%, +8%, +8%, +16%, +8%, +8%),;
+  $length: length($lightness);
+  $palette: ();
+
+  @each $name, $color in $colors {
+    $i: $length;
+    $gradients: ();
+    $shade: $color;
+
+    @each $light in $lightness {
+      $shade: lighten($shade, $light);
+      $gradients: map-merge($gradients, ('#{$name}--#{$i}': $shade));
+      $i: $i - 1;
+    }
+
+    $palette: map-merge($palette, $gradients);
+  }
+
+  $palette: map-merge($predefined, $palette);
+
+  @return $palette;
+}

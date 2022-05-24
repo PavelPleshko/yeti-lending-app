@@ -1,14 +1,14 @@
-@import "../variables.module";
-@import "../mixins/typography-units-calc";
+@import "src/static/sass/variables/index";
+@import "src/static/sass/abstracts/typography-units-calc";
 
 $base-bottom-margin: rhythm(1 - $font-size-increase-coefficient * 3);
 
 h1, h2, h3, h4, h5, h6 {
-  color: map-get($text-colors, normal);
+  color: var(--text-color-normal);
 }
 
 p {
-  color: map-get($text-colors, body1);
+  color: var(--text-color-body1);
   margin-bottom: $base-bottom-margin;
 }
 

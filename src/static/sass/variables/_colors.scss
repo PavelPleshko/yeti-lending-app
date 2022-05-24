@@ -1,0 +1,13 @@
+@import "src/static/sass/abstracts/color-generator";
+
+$colors: (
+        white: #ffffff,
+        black: #121212,
+        deepsaphire: #06285D,
+        orangepeel: #FBA000,
+        lightgrey: #f6f6f6,
+        grey: #cacaca,
+);
+
+
+$palette: generate-color-palette($colors);

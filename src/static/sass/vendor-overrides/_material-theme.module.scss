@@ -1,0 +1,13 @@
+@import "../variables/index";
+
+
+:export {
+  surfaceNormal: map-get($surface-colors, normal);
+  surfaceBrand: map-get($surface-colors, brand);
+  surfacePaper: map-get($surface-colors, paper);
+  surfaceSecondary: map-get($surface-colors, secondary);
+  surfaceAccent: map-get($surface-colors, accent);
+  textBody1: map-get($text-colors, body1);
+  textBody2: map-get($text-colors, body2);
+  textBody3: map-get($text-colors, body3);
+}

@@ -1,5 +1,5 @@
-@import "../static/sass/variables.module";
-@import "../static/sass/mixins/typography-units-calc";
+@import "../static/sass/variables/index";
+@import "src/static/sass/abstracts/typography-units-calc";
 
 $jumbotron-min-height: rhythm(22);
 
@@ -8,7 +8,7 @@ $jumbotron-min-height: rhythm(22);
 
   &__hero-wrapper {
     position: relative;
-    background: map-get($surface-colors, secondary);
+    background: var(--surface-color-elevated1);
   }
 
   &__hero {
@@ -26,13 +26,13 @@ $jumbotron-min-height: rhythm(22);
 
   &__content-section {
     padding: rhythm(2) 15%;
-    color: map-get($text-colors, normal);
+    color: var(--text-color-normal);
 
     &:nth-child(n) {
-      background-color: map-get($surface-colors, brand);
+      background-color: var(--surface-color-normal);
     }
     &:nth-child(2n) {
-      background-color: map-get($surface-colors, secondary);
+      background-color: var(--surface-color-elevated1);
     }
 
     &-header {
@@ -58,5 +58,5 @@ $jumbotron-min-height: rhythm(22);
 
 .accent-text {
   font-weight: bold;
-  color: map-get($text-colors, accent);
+  color: var(--color-accent);
 }

@@ -1,4 +1,4 @@
-@import "../variables.module";
+@import "../variables/index";
 
 $text-link-color: map-get($text-colors, link) !default;
 $text-link-hover-color: map-get($text-colors, 'hover') !default;
