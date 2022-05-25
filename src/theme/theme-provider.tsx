@@ -1,10 +1,13 @@
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
+import { useResolveMatchingTheme } from './hooks/use-resolve-matching-theme';
+import { useThemeStorage } from './hooks/use-theme-storage';
 import { createYetiMaterialTheme } from './theme';
 import { ThemeProvider } from '@mui/material';
-import { AvailableThemes, useThemeLoader } from './hooks/use-theme-loader';
+import { useThemeLoader } from './hooks/use-theme-loader';
 import { useThemeVars } from './hooks/use-theme-vars';
+import { AvailableThemes } from './theme.constants';
 
 export const AppThemeContext = createContext<{
     currentTheme: AvailableThemes,
@@ -13,8 +16,16 @@ export const AppThemeContext = createContext<{
 
 function AppThemeProvider ({ children }: any) {
     const [ loadTheme ] = useThemeLoader();
-    const [ currentTheme, setCurrentTheme ] = useState<AvailableThemes>(AvailableThemes.dark);
+    const themeFromPreferences = useResolveMatchingTheme();
+    const { storeTheme } = useThemeStorage();
+    const [ currentTheme, setCurrentTheme ] = useState<AvailableThemes>(themeFromPreferences);
 
+    useLayoutEffect(() => {
+        setCurrentTheme(themeFromPreferences);
+    }, [ themeFromPreferences ]);
+
+    // whenever currentTheme changes we load new stylesheet into the DOM and re-create the
+    // color palette for material.
     useEffect(() => {
         loadTheme(currentTheme);
     }, [ currentTheme ]);
@@ -33,6 +44,7 @@ function AppThemeProvider ({ children }: any) {
     //// PROVIDER API
     const changeTheme = (themeId: AvailableThemes): void => {
         setCurrentTheme(themeId);
+        storeTheme(themeId);
     };
 
     return (

@@ -4,13 +4,8 @@ import defaultStyleVars from '!raw-loader!sass-loader!../../static/sass/themes/_
 import lightStyleVars from '!raw-loader!sass-loader!../../static/sass/themes/_light.scss';
 import { useRef } from 'react';
 
-export enum AvailableThemes {
-    dark = 'dark',
-    light = 'light',
-}
+import { AvailableThemes, DEFAULT_THEME } from '../theme.constants';
 
-// TODO move to app config
-export const DEFAULT_THEME = AvailableThemes.dark;
 
 const varsByTheme = {
     [AvailableThemes.dark]: defaultStyleVars,
