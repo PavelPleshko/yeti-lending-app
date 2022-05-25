@@ -1,20 +1,14 @@
-import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
 import AppRouter from './AppRouter';
 import AppInitializeProvider from './config/app.config';
 import { Footer } from './landing/footer';
-import { yetiMainTheme } from './theme/theme';
+import { AppThemeProvider } from './theme';
 
-
-import './App.scss';
 
 function App () {
     return (
         <AppInitializeProvider>
-            <ThemeProvider theme={ yetiMainTheme }>
-
-                {/*<CssBaseline/>*/ }
+            <AppThemeProvider >
 
                 <div className="layout-wrapper layout-container layout-container--cutoff">
 
@@ -29,7 +23,7 @@ function App () {
                     </div>
                 </div>
 
-            </ThemeProvider>
+            </AppThemeProvider>
         </AppInitializeProvider>
     );
 }

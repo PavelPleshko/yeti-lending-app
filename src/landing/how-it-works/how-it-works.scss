@@ -1,5 +1,5 @@
-@import "../../static/sass/variables.module";
-@import "../../static/sass/mixins/typography-units-calc";
+@import "../../static/sass/variables/index";
+@import "src/static/sass/abstracts/typography-units-calc";
 
 
 .Steps__container {
@@ -16,7 +16,7 @@
 
       &-description {
         font-size: map-get($font-sizes, small);
-        color: map-get($text-colors, body1);
+        color: var(--text-color-body1);
       }
     }
 

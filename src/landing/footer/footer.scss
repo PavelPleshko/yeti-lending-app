@@ -1,27 +1,27 @@
-@import "../../static/sass/variables.module";
-@import "../../static/sass/mixins/typography-units-calc";
+@import "../../static/sass/variables/index";
+@import "src/static/sass/abstracts/typography-units-calc";
 
 $list-elements-bottom-margin: rhythm(0.25);
 $footer-content-padding: rhythm(2);
 
 .Footer {
   padding: $footer-content-padding;
-  background-color: map-get($surface-colors, brand);
+  background-color: var(--surface-color-normal);
 
   &__info-section {
     > label {
       font-weight: bold;
       display: inline-block;
-      color: map-get($text-colors, normal);
+      color: var(--text-color-normal);
       margin-bottom: $list-elements-bottom-margin;
     }
 
     a {
-      color: map-get($text-colors, body2);
+      color: var(--text-color-body1);
       font-size: map-get($font-sizes, small);
 
       &:hover {
-        color: map-get($text-colors, accent);
+        color: var(--color-accent);
       }
     }
 

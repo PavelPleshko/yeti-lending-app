@@ -1,0 +1,37 @@
+$theme-schema: (
+        color-brand: '',
+        color-accent: '',
+        text-color-normal: '',
+        text-color-body1: '',
+        text-color-body2: '',
+        surface-color-normal: '',
+        surface-color-elevated1: '',
+        surface-color-elevated2: '',
+        surface-color-elevated3: '',
+);
+
+@function create-theme($vars: ()) {
+  $outputTheme: ();
+
+  @each $name, $_ in $theme-schema {
+
+    $value: map-get($vars, $name);
+    @if $value == null {
+      @error 'You have not provided the variable for theme or it\'s undefined. Var name: ' + $name;
+    }
+    $outputTheme: map-merge($outputTheme, ('--#{$name}': $value));
+  }
+
+  @return $outputTheme;
+}
+
+@mixin apply-theme-vars($vars: ()) {
+  @each $name, $value in $vars {
+    #{$name}: $value;
+  }
+}
+
+@mixin create-and-apply-theme($vars: ()) {
+  $resolvedVars: create-theme($vars);
+  @include apply-theme-vars($resolvedVars);
+}

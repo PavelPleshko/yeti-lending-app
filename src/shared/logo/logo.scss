@@ -1,5 +1,5 @@
-@import "../../static/sass/mixins/typography-units-calc";
-@import "../../static/sass/variables.module";
+@import "src/static/sass/abstracts/typography-units-calc";
+@import "../../static/sass/variables/index";
 
 .Logo {
   position: relative;
@@ -32,7 +32,7 @@
 
   &__underlay {
     position: absolute;
-    background-color: map-get($surface-colors, accent);
+    background-color: var(--color-accent);
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -43,11 +43,11 @@
     margin-left: rhythm(0.5);
     text-decoration: none;
     text-transform: capitalize;
-    color: map-get($surface-colors, accent);
+    color: var(--color-accent);
     font-weight: bold;
 
     &:hover {
-      color: map-get($surface-colors, accent);
+      color: var(--color-accent);
       text-decoration: none;
     }
   }

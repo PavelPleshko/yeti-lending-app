@@ -1,0 +1,27 @@
+@import "typography";
+@import "colors";
+
+$surface-colors: (
+        normal: map_get($colors, white),
+        light: map_get($colors, lightgrey),
+        paper: #0e4399,
+        brand: rgb(6,40,93),
+        accent: #FBA000,
+        secondary: #0B3372,
+        highlight: #deeefd,
+        disabled: map_get($colors, grey)
+) !default;
+
+$text-colors: (
+        normal: map-get($colors, white),
+        brand: #06285D,
+        secondary: rgb(6,40,93),
+        accent: #FBA000,
+        // text color with highest emphasis then we decrease opacity
+        body1: rgba(255, 255, 255, 0.87),
+        body2: rgba(255, 255, 255, 0.6),
+        body3: rgba(255, 255, 255, 0.4),
+        inverse: map_get($colors, white),
+        link: #5583c3,
+        hover: #456FAB
+) !default;
