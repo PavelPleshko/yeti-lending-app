@@ -28,12 +28,24 @@ $toolbar-height: rhythm(3);
       margin-right: rhythm(0.5);
     }
 
-    button[aria-pressed] {
+    button[aria-pressed="true"] {
+      position: relative;
       color: var(--text-color-normal);
+      border: 1px solid var(--surface-color-elevated3) !important;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--surface-color-elevated3);
+        opacity: 0.2;
+      }
     }
 
     button[aria-pressed="false"] {
-      color: var(--text-color-body1);
+      border: 1px solid var(--surface-color-elevated2);
+      color: var(--surface-color-elevated3);
     }
   }
 

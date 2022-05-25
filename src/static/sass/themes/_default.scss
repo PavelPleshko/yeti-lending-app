@@ -1,22 +1,21 @@
 @import "../variables/index";
+@import "../abstracts/create-theme";
 
 $text-color-normal: map-get($colors, white);
 $surface-color-normal: map-get($colors, deepsaphire);
 
 :root {
-  // palette
-  --color-brand: #{map-get($colors, deepsaphire)};
-  --color-accent: #{desaturate(map-get($colors, orangepeel), 20)};
-
-  // text colors
-  --text-color-normal: #{transparentize($text-color-normal, 0.13)};
-  --text-color-body1: #{transparentize($text-color-normal, 0.33)};
-  --text-color-body2: #{transparentize($text-color-normal, 0.6)};
-
-  // surface colors
-  --surface-color-normal: #{$surface-color-normal};
-  --surface-color-elevated1: #{lighten($surface-color-normal, 5)};
-  --surface-color-elevated2: #{lighten($surface-color-normal, 15)};
+  @include create-and-apply-theme((
+          color-brand: #{map-get($colors, deepsaphire)},
+          color-accent: #{desaturate(map-get($colors, orangepeel), 20)},
+          text-color-normal: #{transparentize($text-color-normal, 0.13)},
+          text-color-body1: #{transparentize($text-color-normal, 0.33)},
+          text-color-body2: #{transparentize($text-color-normal, 0.6)},
+          surface-color-normal: #{$surface-color-normal},
+          surface-color-elevated1: #{lighten($surface-color-normal, 5)},
+          surface-color-elevated2: #{lighten($surface-color-normal, 15)},
+          surface-color-elevated3: #{lighten($surface-color-normal, 35)}
+  ));
 }
 
 // in dark mode we need to remove all box-shadows since

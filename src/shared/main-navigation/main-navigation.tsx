@@ -1,6 +1,7 @@
 import { AppBar, Button, Toolbar, ToggleButton, ToggleButtonGroup } from '@mui/material';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 import * as React from 'react';
 
@@ -41,14 +42,18 @@ function MainNavigation () {
                         size="small"
                         color="info"
                         value={ currentTheme }
-                        onChange={ (event, value) => changeTheme(value) }
+                        onChange={ (event, value) => {
+                            if (value) {
+                                changeTheme(value);
+                            }
+                        } }
                         exclusive
                     >
                         <ToggleButton value={ AvailableThemes.dark }>
-                            <DarkModeIcon/>
+                            <DarkModeOutlinedIcon/>
                         </ToggleButton>
                         <ToggleButton value={ AvailableThemes.light }>
-                            <WbSunnyIcon/>
+                            <WbSunnyOutlinedIcon/>
                         </ToggleButton>
                     </ToggleButtonGroup>
                 </div>
