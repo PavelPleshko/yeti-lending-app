@@ -8,6 +8,7 @@ $theme-schema: (
         surface-color-elevated1: '',
         surface-color-elevated2: '',
         surface-color-elevated3: '',
+        surface-color-accent: ''
 );
 
 @function create-theme($vars: ()) {

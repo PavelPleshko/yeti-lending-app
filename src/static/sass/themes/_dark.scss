@@ -14,7 +14,8 @@ $surface-color-normal: map-get($colors, deepsaphire);
           surface-color-normal: #{$surface-color-normal},
           surface-color-elevated1: #{lighten($surface-color-normal, 5)},
           surface-color-elevated2: #{lighten($surface-color-normal, 15)},
-          surface-color-elevated3: #{lighten($surface-color-normal, 35)}
+          surface-color-elevated3: #{lighten($surface-color-normal, 35)},
+          surface-color-accent: #{lighten($surface-color-normal, 10)},
   ));
 }
 

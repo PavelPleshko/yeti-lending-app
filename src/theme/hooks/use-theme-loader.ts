@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import defaultStyleVars from '!raw-loader!sass-loader!../../static/sass/themes/_default.scss';
+import defaultStyleVars from '!raw-loader!sass-loader!../../static/sass/themes/_dark.scss';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import lightStyleVars from '!raw-loader!sass-loader!../../static/sass/themes/_light.scss';
 import { useRef } from 'react';

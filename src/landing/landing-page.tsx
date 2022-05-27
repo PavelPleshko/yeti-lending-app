@@ -8,6 +8,7 @@ import HeroBg from './hero-bg';
 import HowItWorks from './how-it-works/how-it-works';
 import ValuesCards from './values-cards/values-cards';
 import dashboardImage from '../static/images/dashboard.svg';
+import { ReactComponent as BackgroundIllustration } from '../static/images/illustration-bg1.svg';
 
 function LandingPage () {
 
@@ -18,6 +19,9 @@ function LandingPage () {
                 <div className="LandingPage__hero">
                     <HeroBg/>
                     <div>
+                        <div className="LandingPage__hero-image-bg">
+                            <BackgroundIllustration />
+                        </div>
                         <div className="LandingPage__hero-bg"/>
                     </div>
                     <Jumbotron>
