@@ -5,8 +5,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 import * as React from 'react';
 
-import { useAppTheme } from '../../theme';
-import { AvailableThemes } from '../../theme/hooks/use-theme-loader';
+import { AvailableThemes, useAppTheme } from '../../theme';
 import Logo from '../logo/logo';
 import './main-navigation.scss';
 

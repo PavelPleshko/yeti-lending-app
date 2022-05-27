@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useAppTheme } from './use-app-theme';
 
 import { ThemeVariables, ThemeVariablesResolved } from '../theme.types';
-import { AvailableThemes } from './use-theme-loader';
+import { AvailableThemes } from '../theme.constants';
 
 const allVarsIterable = Object.values(ThemeVariables);
 
