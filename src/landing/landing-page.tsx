@@ -1,5 +1,5 @@
 import { Button, Grid } from '@mui/material';
-import * as React from 'react';
+import React from 'react';
 
 import './landing-page.scss';
 import MainNavigation from '../shared/main-navigation/main-navigation';
@@ -10,7 +10,7 @@ import ValuesCards from './values-cards/values-cards';
 import dashboardImage from '../static/images/dashboard.svg';
 import { ReactComponent as BackgroundIllustration } from '../static/images/illustration-bg1.svg';
 
-function LandingPage () {
+function LandingPage (): JSX.Element {
 
     return (
         <div className="LandingPage">
@@ -20,7 +20,7 @@ function LandingPage () {
                     <HeroBg/>
                     <div>
                         <div className="LandingPage__hero-image-bg">
-                            <BackgroundIllustration />
+                            <BackgroundIllustration/>
                         </div>
                         <div className="LandingPage__hero-bg"/>
                     </div>
@@ -76,7 +76,8 @@ function LandingPage () {
 
             <section className="LandingPage__content-section" style={ { textAlign: 'center' } }>
 
-                <h2>More than <b className="accent-text">12</b> asset pools with more than <b className="accent-text">3.000.000$</b> worth of assets</h2>
+                <h2>More than <b className="accent-text">12</b> asset pools with more than <b className="accent-text">3.000.000$</b> worth
+                    of assets</h2>
 
                 <Button color="secondary" variant="contained">
                     See all

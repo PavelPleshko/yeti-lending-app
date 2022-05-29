@@ -1,7 +1,7 @@
 import * as React from 'react';
+
 import AppRouter from './AppRouter';
 import AppInitializeProvider from './config/app.config';
-import ContractManifestProvider from './config/protocol-communication/contract-manifest.provider';
 import { Footer } from './landing/footer';
 import { createProvidersContainer } from './shared/providers/provider.container';
 import { AppThemeProvider } from './theme';
@@ -9,10 +9,9 @@ import { AppThemeProvider } from './theme';
 const AppProviderContainer = createProvidersContainer(
     AppInitializeProvider,
     AppThemeProvider,
-    ContractManifestProvider,
 );
 
-function App () {
+function App (): JSX.Element {
     return (
         <AppProviderContainer>
             <div className="layout-wrapper layout-container layout-container--cutoff">

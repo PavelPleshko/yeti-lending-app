@@ -28,11 +28,14 @@ const steps = [
     },
 ];
 
-function HowItWorks (props: any) {
+function HowItWorks (): JSX.Element {
 
     return <div className="Steps__container">
         { steps.map((step, i) => {
             const isEven = i % 2 === 0;
+            const isFirst = i === 0;
+            const isLast = i === steps.length - 1;
+
             const content = (
                 <Grid className="Step__content" item sm={ 12 } md={ 4 }>
                     <h3 className="Step__content-title">{ step.title }</h3>
@@ -51,8 +54,11 @@ function HowItWorks (props: any) {
 
                 { isEven ? image : content }
 
-                <Grid className="Step__count" alignItems="center" justifyContent="center" item sm={false} md={ 2 }>
-                    <span>{ i + 1 }</span>
+                <Grid className={['Step__count', isFirst ? `Step__count--first` : '', isLast ? 'Step__count--last' : ''].join(' ')}
+                      alignItems="center" justifyContent="center" item sm={false} md={ 2 }>
+                    <span className="Step__count-leading-bar" />
+                    <span className="Step__count-point">{ i + 1 }</span>
+                    <span className="Step__count-trailing-bar" />
                 </Grid>
 
                 { isEven ? content : image }

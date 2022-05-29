@@ -14,6 +14,6 @@ export const useYetiContractManifest = () => {
 
     return {
         manifestReady,
-        getContractAddress: resolver.getContract,
+        getContractAddress: (address: string) => resolver.getContract(address),
     };
 };

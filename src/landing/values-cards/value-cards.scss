@@ -23,5 +23,10 @@
     color: var(--text-color-body2);
     opacity: 0.5;
     pointer-events: none;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
