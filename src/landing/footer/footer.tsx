@@ -55,7 +55,7 @@ function Footer () {
                     </label>
                     <ul aria-labelledby="protocol-links-label">
                         <li>
-                            <a href="/" target="_blank">Github</a>
+                            <a href="https://github.com/PavelPleshko/yeti-finance-core" target="_blank">Github</a>
                         </li>
                         <li>
                             <a href="/" target="_blank">Discord</a>

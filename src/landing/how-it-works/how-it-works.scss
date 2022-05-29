@@ -9,10 +9,14 @@
 
   .Step {
     justify-content: center;
-    margin-bottom: rhythm(2);
 
     &__content {
       align-self: center;
+      padding: rhythm(0.5);
+      margin-bottom: rhythm(2);
+      background-color: var(--surface-color-normal);
+      border: 2px solid var(--surface-color-elevated2);
+      border-radius: 5px;
 
       &-description {
         font-size: map-get($font-sizes, small);
@@ -22,21 +26,44 @@
 
     &__count {
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      position: relative;
 
-      > span {
-        font-size: 18px;
-        box-sizing: content-box;
-        border: 2px solid;
-        border-radius: 50%;
-        line-height: 34px;
-        width: 34px;
-        text-align: center;
+      &--first {
+        .Step__count-leading-bar {
+          width: 0;
+        }
       }
+
+      &--last {
+        .Step__count-trailing-bar {
+          width: 0;
+        }
+      }
+    }
+
+    &__count-leading-bar, &__count-trailing-bar {
+      width: 3px;
+      background-color: var(--color-accent);
+      height: 100%;
+    }
+
+    &__count-point {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--color-brand);
+      background-color: var(--color-accent);
+      box-sizing: content-box;
+      border-radius: 50%;
+      line-height: 34px;
+      width: 34px;
+      text-align: center;
     }
 
     &__image {
       max-height: 15rem;
+      margin-bottom: rhythm(2);
     }
   }
 }
